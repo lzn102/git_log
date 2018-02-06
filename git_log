@@ -13,7 +13,7 @@ git status
 git diff
 放回当前目录(仓库)文件与git仓库文件的具体的不同点
 
-git log --pretty=oneline
+git log --pretty=oneline  "提交命令"
 显示提交到git仓库的日志,后面参数可以让日志以一行输出
 
 git reset --hard HEAD^ "^表示上个版本,^^表示上上个版本,可用~(数字)来简写,如~10"
@@ -25,8 +25,13 @@ git reset --hard id "id是git log命令下commit后的版本号,可只写几位�
 HEAD
 一个指向版本的指针
 
-git reflog
+git reflog               "历史命令"
 记录你的每一次命令,可在此处看到文件的id,方便误操作时找回文件
 
+git原理:
+	.git隐藏文件是git创建的版本库
+	工作区:可见的目录
+	暂存区(stage):add命令添加的文件都是放在暂存区
+	控制区(master):最终文件的存放处,还有唯一的分支master和它的指针HEAD
 
 
