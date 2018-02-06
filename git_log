@@ -43,7 +43,10 @@ git reset HEAD file
 git rm  "rm file --> git status --> git rm --> git commit"
 删除git仓库中的文件,然后需要git commit应用到仓库,若恢复会丢失最近一次提交的修改
 
-
+git连接远程服务器(github):
+	ssh-keygen -t rsa -C "email@email.com" 命令生成SSH Key密钥
+	将id_rsa.pub的公钥复制到github下的SSH Keys中
+	id_rsa下是私钥,不能泄漏
 
 
 
