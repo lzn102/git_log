@@ -53,6 +53,10 @@ git连接远程服务器(github):
 	git push -u origin master 第一次推送master分支(git仓库)的所有内容
 	git push origin master 推送最新修改
 
+从github同步文件到本地:
+	git clone git@server-name:path/repo-name.git 复制github仓库下所有文件
+	传输协议有git://和https://等其他,但git://速度最快,若环境不支持可换其他
+
 
 
 
