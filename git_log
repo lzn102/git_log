@@ -57,6 +57,15 @@ git连接远程服务器(github):
 	git clone git@server-name:path/repo-name.git 复制github仓库下所有文件
 	传输协议有git://和https://等其他,但git://速度最快,若环境不支持可换其他
 
+git分支使用:
+	git branch 查看分支,*为当前所在分支
+	git branch <name> 创建分支
+	git checkout <name> 切换分支
+	git checkout -b <name> 创建+切换分支
+	git merge <name> 合并<name>分支道当前所在分支
+	git branch -d <name> 删除分支
+	使用创建分支工作再合并相比在master分支上修改要更安全,但效果一样
+
 
 
 
