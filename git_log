@@ -35,8 +35,25 @@ git原理:
 	控制区(master):最终文件的存放处,还有唯一的分支master和它的指针HEAD
 
 git checkout -- file   "--很重要,没有就变成另外一个命令"
-撤销工作区文件的修改
+撤销工作区文件的修改(git仓库文件替换git目录下文件)
 
 git reset HEAD file
 撤销暂存区文件的修改. (再次撤销工作区文件修改可以应对文件乱改的情况)
+
+git rm  "rm file --> git status --> git rm --> git commit"
+删除git仓库中的文件,然后需要git commit应用到仓库,若恢复会丢失最近一次提交的修改
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
