@@ -83,8 +83,18 @@ git log --graph 可查看分支合并图
 					  |      
 					 dev     (活跃分支)
 					/ | \		
-				        1 2 3    (个人分支) 		
-			
+				        1 2 3    (个人分支) 
+
+bug分支:
+	假如dev上有未完成的修改,但不能提交,而master上有bug需要修复,则
+	在dev分支上git stash可以隐藏dev上未提交的内容
+	然后在master创建issue-101分支,用来修复bug
+	bug提交到master上,此时dev如果不隐藏,会把未完成的修改也提交		
+	git stash list可以查看stash内容
+	git stash apply恢复隐藏的内容,stash内容不删除,可查看
+	若要删除stash内容要用git stash drop
+	git stash pop恢复隐藏内容同时删除stash内容
+	git stash apply stash@{0} 恢复指定stash,{}内索引		
 
 
 
