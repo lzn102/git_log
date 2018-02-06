@@ -87,14 +87,18 @@ git log --graph 可查看分支合并图
 
 bug分支:
 	假如dev上有未完成的修改,但不能提交,而master上有bug需要修复,则
-	在dev分支上git stash可以隐藏dev上未提交的内容
+	在dev分支上git stash可以隐藏dev上未提交的内容(此时dev在暂存区)
 	然后在master创建issue-101分支,用来修复bug
 	bug提交到master上,此时dev如果不隐藏,会把未完成的修改也提交		
 	git stash list可以查看stash内容
 	git stash apply恢复隐藏的内容,stash内容不删除,可查看
 	若要删除stash内容要用git stash drop
 	git stash pop恢复隐藏内容同时删除stash内容
-	git stash apply stash@{0} 恢复指定stash,{}内索引		
+	git stash apply stash@{0} 恢复指定stash,{}内索引
+
+Feature分支:
+	开发新功能时最好创建Feature分支
+	git branch -D <name> 强制删除分支(指分支已经git add到暂存区)		
 
 
 
